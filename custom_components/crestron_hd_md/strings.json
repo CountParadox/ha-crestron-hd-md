@@ -1,0 +1,62 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Crestron HD-MD switcher",
+        "description": "Enter the switcher's IP address. No user name or password is needed.",
+        "data": {
+          "host": "Host",
+          "name": "Name"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach the switcher.",
+      "not_hd_md": "The device did not answer like a Crestron HD-MD switcher."
+    },
+    "abort": {
+      "already_configured": "This switcher is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "scan_interval": "Polling interval (seconds)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "select": {
+      "output_source": {
+        "name": "Output {output} source"
+      }
+    },
+    "switch": {
+      "output_enabled": {
+        "name": "Output {output} enabled"
+      }
+    },
+    "binary_sensor": {
+      "input_sync": {
+        "name": "Input {input} signal"
+      },
+      "output_sync": {
+        "name": "Output {output} display"
+      }
+    }
+  },
+  "services": {
+    "select_input": {
+      "name": "Select input by number",
+      "description": "Routes an input to the targeted output by its number, whatever the input is named.",
+      "fields": {
+        "input": {
+          "name": "Input",
+          "description": "Input number, starting at 1. 0 disconnects the output."
+        }
+      }
+    }
+  }
+}

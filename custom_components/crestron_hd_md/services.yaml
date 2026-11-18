@@ -1,0 +1,11 @@
+select_input:
+  target:
+    entity:
+      integration: crestron_hd_md
+      domain: select
+  fields:
+    input:
+      required: true
+      default: 1
+      selector:
+        number: { min: 0, max: 8, step: 1, mode: box }

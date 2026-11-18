@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "select": {
+      "output_source": {
+        "default": "mdi:video-input-hdmi"
+      }
+    },
+    "switch": {
+      "output_enabled": {
+        "default": "mdi:hdmi-port"
+      }
+    },
+    "binary_sensor": {
+      "input_sync": {
+        "default": "mdi:video-input-hdmi"
+      },
+      "output_sync": {
+        "default": "mdi:monitor"
+      }
+    }
+  },
+  "services": {
+    "select_input": {
+      "service": "mdi:swap-horizontal"
+    }
+  }
+}
